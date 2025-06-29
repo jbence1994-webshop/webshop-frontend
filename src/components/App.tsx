@@ -1,7 +1,9 @@
-const App = () => {
+import * as React from "react";
+
+const App: React.FC<AppProps> = ({ applicationName }) => {
   return (
     <>
-      <h1>Webshop</h1>
+      <h1>{applicationName}</h1>
     </>
   );
 };
