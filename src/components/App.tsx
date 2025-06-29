@@ -1,9 +1,9 @@
 import * as React from "react";
 
-const App: React.FC<AppProps> = ({ applicationName }) => {
+const App: React.FC<AppProps> = ({ appName }) => {
   return (
     <>
-      <h1>{applicationName}</h1>
+      <h1>{appName}</h1>
     </>
   );
 };
