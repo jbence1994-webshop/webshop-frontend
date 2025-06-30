@@ -1,10 +1,10 @@
-const MAIN_PAGE: KeyValuePair<string, string> = {
-  key: "Main page",
+const HOME_PAGE: KeyValuePair<string, string> = {
+  key: "home",
   value: "/",
 };
 
 const PRODUCTS_PAGE: KeyValuePair<string, string> = {
-  key: "Products",
+  key: "products",
   value: "/products",
 };
 
@@ -18,4 +18,4 @@ const ALL_PATHS: KeyValuePair<string, string> = {
   value: "*",
 };
 
-export { MAIN_PAGE, PRODUCTS_PAGE, ERROR_PAGE, ALL_PATHS };
+export { HOME_PAGE, PRODUCTS_PAGE, ERROR_PAGE, ALL_PATHS };
