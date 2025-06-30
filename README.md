@@ -13,6 +13,8 @@ webshop
   />
 </p>
 
+[![Continuous integration](https://github.com/jbence1994-webshop/webshop-frontend/actions/workflows/build.yaml/badge.svg)](https://github.com/jbence1994-webshop/webshop-frontend/actions/workflows/build.yaml)
+
 Prerequisites
 -------------
 
