@@ -2,10 +2,10 @@ import * as React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router";
 
+import Error from "./common/Error.tsx";
+import Main from "./common/Main.tsx";
 import Navbar from "./common/Navbar.tsx";
-import Main from "./Main.tsx";
-import Products from "./Products.tsx";
-import Error from "./Error.tsx";
+import Products from "./products/Products.tsx";
 
 import {
   MAIN_PAGE,
