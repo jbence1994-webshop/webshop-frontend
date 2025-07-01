@@ -1,9 +1,15 @@
-import * as React from "react";
+import { useEffect } from "react";
 
-const App: React.FC<AppProps> = ({ appName }) => {
+import { APPLICATION_NAME } from "../constants/appConfig.ts";
+
+const App = () => {
+  useEffect(() => {
+    document.title = APPLICATION_NAME;
+  }, []);
+
   return (
     <>
-      <h1>{appName}</h1>
+      <h1>{APPLICATION_NAME}</h1>
     </>
   );
 };
