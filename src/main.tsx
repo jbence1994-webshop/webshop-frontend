@@ -7,6 +7,6 @@ import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App appName={import.meta.env.VITE_APP_NAME} />
+    <App />
   </StrictMode>,
 );
