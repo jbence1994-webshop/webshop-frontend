@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import { APPLICATION_NAME } from "../constants/appConfig.ts";
+import { APPLICATION_NAME } from "../constants/appConfig";
 
 const App = () => {
   useEffect(() => {
