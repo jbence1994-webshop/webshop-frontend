@@ -1,7 +1,9 @@
-const SamplePage = () => {
+import type { FC } from "react";
+
+const SamplePage: FC<PageProps> = ({ name }) => {
   return (
     <section>
-      <p>Sample page</p>
+      <p>${name}</p>
     </section>
   );
 };

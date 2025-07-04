@@ -1,7 +1,9 @@
-const Error = () => {
+import type { FC } from "react";
+
+const Error: FC<PageProps> = ({ name }) => {
   return (
     <section>
-      <p>Error page</p>
+      <p>${name}</p>
     </section>
   );
 };
