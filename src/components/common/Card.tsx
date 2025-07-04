@@ -1,6 +1,6 @@
-import * as React from "react";
+import type { FC } from "react";
 
-const Card: React.FC<CardProps> = ({ title, image, imageAlt, contents }) => {
+const Card: FC<CardProps> = ({ title, image, imageAlt, contents }) => {
   const photoUploadName: string = "photo-upload";
 
   return (
