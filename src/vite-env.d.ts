@@ -6,10 +6,6 @@ interface NavbarProps {
   pages: Page[];
 }
 
-interface PageProps {
-  name: string;
-}
-
 interface Page {
   name: string;
   path: string;
