@@ -3,7 +3,7 @@ import type { FC } from "react";
 const Error: FC<PageProps> = ({ name }) => {
   return (
     <section>
-      <p>${name}</p>
+      <p>{name}</p>
     </section>
   );
 };
