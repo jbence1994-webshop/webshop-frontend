@@ -3,7 +3,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 import Navbar from "./common/Navbar";
 import Home from "./common/Home";
-import Products from "./products/Products.tsx";
+import Products from "./products/Products";
 import Error from "./common/Error";
 
 import { APPLICATION_NAME } from "../constants/appConfig";
