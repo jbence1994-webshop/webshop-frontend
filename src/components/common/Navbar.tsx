@@ -30,13 +30,8 @@ const Navbar: FC<NavbarProps> = ({ applicationName, homePagePath, pages }) => {
         >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             {pages.map(({ name, path }) => (
-              <li className="nav-item">
-                <Link
-                  key={name}
-                  className="nav-link"
-                  aria-current="page"
-                  to={path}
-                >
+              <li key={name} className="nav-item">
+                <Link className="nav-link" aria-current="page" to={path}>
                   {name}
                 </Link>
               </li>

@@ -36,7 +36,7 @@ const Products = () => {
     <>
       <section className="row">
         {products.map((product) => (
-          <article className="col-lg-4 col-sm-12">
+          <article key={product.id} className="col-lg-4 col-sm-12">
             <ProductCard product={product} />
           </article>
         ))}
