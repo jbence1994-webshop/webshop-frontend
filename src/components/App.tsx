@@ -15,36 +15,33 @@ import {
 } from "../app.constants.ts";
 
 const App: React.FC<AppProps> = ({ appName }) => {
+  const homePage: Page = {
+    title: appName,
+    key: HOME_PAGE.key,
+    href: HOME_PAGE.value,
+  };
+
+  const pages: Page[] = [
+    { title: "Products", key: PRODUCTS_PAGE.key, href: PRODUCTS_PAGE.value },
+  ];
+
   return (
     <>
       <BrowserRouter>
-        <Navbar
-          homePage={{
-            title: appName,
-            key: HOME_PAGE.key,
-            href: HOME_PAGE.value,
-          }}
-          pages={[
-            {
-              title: "Products",
-              key: PRODUCTS_PAGE.key,
-              href: PRODUCTS_PAGE.value,
-            },
-          ]}
-        />
+        <Navbar homePage={homePage} pages={pages} />
         <main>
           <Routes>
             <Route
               path={HOME_PAGE.value}
-              element={<Home pageProps={{ name: HOME_PAGE.key }} />}
+              element={<Home pageName={HOME_PAGE.key} />}
             />
             <Route
               path={PRODUCTS_PAGE.value}
-              element={<Products pageProps={{ name: PRODUCTS_PAGE.key }} />}
+              element={<Products pageName={PRODUCTS_PAGE.key} />}
             />
             <Route
               path={ERROR_PAGE.value}
-              element={<Error pageProps={{ name: ERROR_PAGE.key }} />}
+              element={<Error pageName={ERROR_PAGE.key} />}
             />
             <Route
               path={ALL_PATHS.value}

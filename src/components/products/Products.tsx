@@ -1,9 +1,9 @@
 import * as React from "react";
 
-const Products: React.FC<ProductsProps> = ({ pageProps }) => {
+const Products: React.FC<ProductsProps> = ({ pageName }) => {
   return (
     <>
-      <section className={pageProps.name}></section>
+      <section className={pageName}></section>
     </>
   );
 };

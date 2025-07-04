@@ -10,19 +10,15 @@ interface NavbarProps {
 }
 
 interface MainProps {
-  pageProps: PageProps;
+  pageName: string;
 }
 
 interface ProductsProps {
-  pageProps: PageProps;
-}
-
-interface ProductCardProps {
-  products: Product[];
+  pageName: string;
 }
 
 interface ErrorProps {
-  pageProps: PageProps;
+  pageName: string;
 }
 
 interface KeyValuePair<K, V> {
@@ -34,8 +30,4 @@ interface Page {
   title: string;
   key: string;
   href: string;
-}
-
-interface PageProps {
-  name: string;
 }

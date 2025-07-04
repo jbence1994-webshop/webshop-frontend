@@ -1,9 +1,9 @@
 import * as React from "react";
 
-const Error: React.FC<ErrorProps> = ({ pageProps }) => {
+const Error: React.FC<ErrorProps> = ({ pageName }) => {
   return (
     <section>
-      <h1>{pageProps.name}</h1>
+      <h1>{pageName}</h1>
     </section>
   );
 };
