@@ -5,7 +5,7 @@ interface AppProps {
 }
 
 interface NavbarProps {
-  homePage: Page;
+  title: string;
   pages: Page[];
 }
 
@@ -28,6 +28,5 @@ interface KeyValuePair<K, V> {
 
 interface Page {
   title: string;
-  key: string;
-  href: string;
+  linkProperties: KeyValuePair<string, string>;
 }

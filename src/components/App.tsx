@@ -15,20 +15,15 @@ import {
 } from "../app.constants.ts";
 
 const App: React.FC<AppProps> = ({ appName }) => {
-  const homePage: Page = {
-    title: appName,
-    key: HOME_PAGE.key,
-    href: HOME_PAGE.value,
-  };
-
   const pages: Page[] = [
-    { title: "Products", key: PRODUCTS_PAGE.key, href: PRODUCTS_PAGE.value },
+    { title: "Home", linkProperties: HOME_PAGE },
+    { title: "Products", linkProperties: PRODUCTS_PAGE },
   ];
 
   return (
     <>
       <BrowserRouter>
-        <Navbar homePage={homePage} pages={pages} />
+        <Navbar title={appName} pages={pages} />
         <main>
           <Routes>
             <Route

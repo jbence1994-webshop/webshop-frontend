@@ -1,18 +1,16 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar: React.FC<NavbarProps> = ({ homePage, pages }) => {
+const Navbar: React.FC<NavbarProps> = ({ title, pages }) => {
   return (
     <header>
       <nav>
-        <div className="home_page">
-          <Link key={homePage.key} to={homePage.href}>
-            {homePage.title}
-          </Link>
+        <div className="logo">
+          <p>{title}</p>
         </div>
         <div className="pages">
-          {pages.map(({ title, key, href }: Page) => (
-            <Link key={key} to={href}>
+          {pages.map(({ title, linkProperties }: Page) => (
+            <Link key={linkProperties.key} to={linkProperties.value}>
               {title}
             </Link>
           ))}
