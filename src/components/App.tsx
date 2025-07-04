@@ -3,32 +3,27 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router";
 
 import Error from "./common/Error.tsx";
-import Home from "./common/Home.tsx";
+import Main from "./common/Main.tsx";
 import Navbar from "./common/Navbar.tsx";
 import Products from "./products/Products.tsx";
 
 import {
-  HOME_PAGE,
+  MAIN_PAGE,
   PRODUCTS_PAGE,
   ERROR_PAGE,
   ALL_PATHS,
 } from "../app.constants.ts";
 
 const App: React.FC<AppProps> = ({ appName }) => {
-  const pages: Page[] = [
-    { title: "Home", linkProperties: HOME_PAGE },
-    { title: "Products", linkProperties: PRODUCTS_PAGE },
-  ];
-
   return (
     <>
       <BrowserRouter>
-        <Navbar title={appName} pages={pages} />
+        <Navbar displayTitle={appName} />
         <main>
           <Routes>
             <Route
-              path={HOME_PAGE.value}
-              element={<Home pageName={HOME_PAGE.key} />}
+              path={MAIN_PAGE.value}
+              element={<Main pageName={MAIN_PAGE.key} />}
             />
             <Route
               path={PRODUCTS_PAGE.value}

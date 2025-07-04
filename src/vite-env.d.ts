@@ -5,8 +5,7 @@ interface AppProps {
 }
 
 interface NavbarProps {
-  title: string;
-  pages: Page[];
+  displayTitle: string;
 }
 
 interface MainProps {
@@ -24,9 +23,4 @@ interface ErrorProps {
 interface KeyValuePair<K, V> {
   key: K;
   value: V;
-}
-
-interface Page {
-  title: string;
-  linkProperties: KeyValuePair<string, string>;
 }
