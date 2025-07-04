@@ -43,10 +43,7 @@ const App = () => {
             path={SAMPLE_PAGE.value}
             element={<SamplePage name={SAMPLE_PAGE.key} />}
           />
-          <Route
-            path={ERROR_PAGE.value}
-            element={<Error name={ERROR_PAGE.key} />}
-          />
+          <Route path={ERROR_PAGE.value} element={<Error />} />
           <Route
             path={ALL_PATHS}
             element={<Navigate to={ERROR_PAGE.value} />}
