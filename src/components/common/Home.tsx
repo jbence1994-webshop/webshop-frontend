@@ -1,9 +1,7 @@
-import type { FC } from "react";
-
-const Home: FC<PageProps> = ({ name }) => {
+const Home = () => {
   return (
     <section>
-      <p>{name}</p>
+      <p>Home page</p>
     </section>
   );
 };
