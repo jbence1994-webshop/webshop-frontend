@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const Navbar: FC<NavbarProps> = ({ applicationName, homePagePath, pages }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   const toggle = () => setIsOpen(!isOpen);
 
@@ -30,14 +29,9 @@ const Navbar: FC<NavbarProps> = ({ applicationName, homePagePath, pages }) => {
           id="navbarToggler"
         >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            {pages.map(({ name, path }, index) => (
+            {pages.map(({ name, path }) => (
               <li key={name} className="nav-item">
-                <Link
-                  className={`nav-link ${index === selectedIndex ? "active" : ""}`}
-                  aria-current="page"
-                  to={path}
-                  onClick={() => setSelectedIndex(index)}
-                >
+                <Link className="nav-link" aria-current="page" to={path}>
                   {name}
                 </Link>
               </li>
