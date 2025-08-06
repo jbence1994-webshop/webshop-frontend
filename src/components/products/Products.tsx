@@ -36,7 +36,10 @@ const Products = () => {
     <>
       <section className="row">
         {products.map((product) => (
-          <article key={product.id} className="col-lg-4 col-sm-12">
+          <article
+            key={product.id}
+            className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-xs-12"
+          >
             <ProductCard product={product} />
           </article>
         ))}
