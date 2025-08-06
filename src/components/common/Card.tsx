@@ -1,6 +1,12 @@
 import type { FC } from "react";
 
-const Card: FC<CardProps> = ({ title, image, imageAlt, contents }) => {
+const Card: FC<CardProps> = ({
+  title,
+  image,
+  imageAlt,
+  contents,
+  elements,
+}) => {
   const photoUploadName: string = "photo-upload";
 
   return (
@@ -26,6 +32,7 @@ const Card: FC<CardProps> = ({ title, image, imageAlt, contents }) => {
             {content.value}
           </p>
         ))}
+        {elements && elements.map((element) => <>{element}</>)}
       </div>
     </div>
   );
