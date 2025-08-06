@@ -13,6 +13,13 @@ interface CardProps {
   image: string;
   imageAlt: string;
   contents: KeyValuePair<number, string>[];
+  elements: ReactElement[];
+}
+
+interface BadgeProps {
+  textStyle?: string;
+  noMargin?: boolean;
+  content: string;
 }
 
 interface Page {
