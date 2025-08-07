@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import { type FC, Fragment } from "react";
 
 const Card: FC<CardProps> = ({
   title,
@@ -32,7 +32,10 @@ const Card: FC<CardProps> = ({
             {content.value}
           </p>
         ))}
-        {elements && elements.map((element) => <>{element}</>)}
+        {elements &&
+          elements.map((element, index) => (
+            <Fragment key={index}>{element}</Fragment>
+          ))}
       </div>
     </div>
   );

@@ -1,21 +1,46 @@
-import type { FC } from "react";
+import { type FC, useEffect, useState } from "react";
 
 import Badge from "../common/Badge";
 import Card from "../common/Card";
 
+import { getProductPhotos } from "../../services/productPhotoService";
+
 import noImage from "../../assets/no-image.png";
 
 const ProductCard: FC<ProductCardProps> = ({ product }) => {
-  const { id, name, price, unit, description } = product;
+  const { id, name, price, unit } = product;
+
+  const [images, setImages] = useState<ProductPhoto[]>([]);
+
+  useEffect(() => {
+    const getAllProductPhotos = async () => {
+      try {
+        const data = await getProductPhotos(id);
+        setImages(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    getAllProductPhotos();
+  }, [id]);
+
+  let image: string;
+
+  if (images.length !== 0) {
+    image = images[0].url;
+  } else {
+    image = noImage;
+  }
 
   return (
     <>
       <Card
         key={id}
         title={name}
-        image={noImage}
+        image={image}
         imageAlt={name}
-        contents={[{ key: 1, value: description }]}
+        contents={[]}
         elements={[<Badge noMargin={true} content={`$${price} / ${unit}`} />]}
       />
     </>

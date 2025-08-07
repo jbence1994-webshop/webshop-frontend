@@ -1,36 +1,29 @@
+import { useEffect, useState } from "react";
+
 import ProductCard from "./ProductCard";
 
+import { getProducts } from "../../services/productService";
+
 const Products = () => {
-  const products: Product[] = [
-    {
-      id: 1,
-      name: "Product#1",
-      price: 99.99,
-      unit: "pieces",
-      description: "Sample text.",
-    },
-    {
-      id: 2,
-      name: "Product#2",
-      price: 99.99,
-      unit: "pieces",
-      description: "Sample text.",
-    },
-    {
-      id: 3,
-      name: "Product#3",
-      price: 99.99,
-      unit: "pieces",
-      description: "Sample text.",
-    },
-    {
-      id: 4,
-      name: "Product#4",
-      price: 99.99,
-      unit: "pieces",
-      description: "Sample text.",
-    },
-  ];
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const getAllProducts = async () => {
+      try {
+        const data = await getProducts();
+        setProducts(data);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    getAllProducts();
+  }, []);
+
+  if (loading) return <p className="mt-3">Loading...</p>;
 
   return (
     <>
