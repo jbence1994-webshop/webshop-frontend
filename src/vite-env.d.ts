@@ -45,3 +45,10 @@ interface Product {
   unit: string;
   description: string;
 }
+
+// images:
+
+interface ProductPhoto {
+  fileName: string;
+  url: string;
+}

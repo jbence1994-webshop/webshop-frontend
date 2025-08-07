@@ -1,5 +1,6 @@
 import axiosInstance from "axios";
-import { BACKEND_URL } from "../constants/appConfig.ts";
+
+import { BACKEND_URL } from "../constants/appConfig";
 
 const getProducts = async (): Promise<Product[]> => {
   const response = await axiosInstance.get<Product[]>(
