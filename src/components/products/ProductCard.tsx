@@ -6,7 +6,7 @@ import Card from "../common/Card";
 import noImage from "../../assets/no-image.png";
 
 const ProductCard: FC<ProductCardProps> = ({ product }) => {
-  const { id, name, price, unit, description } = product;
+  const { id, name, price, unit } = product;
 
   return (
     <>
@@ -15,7 +15,7 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
         title={name}
         image={noImage}
         imageAlt={name}
-        contents={[{ key: 1, value: description }]}
+        contents={[]}
         elements={[<Badge noMargin={true} content={`$${price} / ${unit}`} />]}
       />
     </>
