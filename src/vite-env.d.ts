@@ -49,6 +49,5 @@ interface Product {
 // images:
 
 interface ProductPhoto {
-  fileName: string;
   url: string;
 }
