@@ -1,7 +1,13 @@
-import { type FC, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Navbar: FC<NavbarProps> = ({ applicationName, homePagePath, pages }) => {
+interface Props {
+  applicationName: string;
+  homePagePath: string;
+  pages: Page[];
+}
+
+const Navbar = ({ applicationName, homePagePath, pages }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
 

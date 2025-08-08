@@ -1,10 +1,14 @@
-import type { FC } from "react";
+interface Props {
+  textStyle?: string;
+  noMargin?: boolean;
+  content: string;
+}
 
-const Badge: FC<BadgeProps> = ({
+const Badge = ({
   textStyle = "text-bg-primary",
   noMargin = false,
   content,
-}) => {
+}: Props) => {
   return (
     <p
       className={`badge rounded-pill px-3 py-2 fs-6 ${textStyle} ${noMargin ? "mb-0" : ""}`}

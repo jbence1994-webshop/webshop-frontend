@@ -1,12 +1,14 @@
-import { type FC, Fragment } from "react";
+import { Fragment, type ReactElement } from "react";
 
-const Card: FC<CardProps> = ({
-  title,
-  image,
-  imageAlt,
-  contents,
-  elements,
-}) => {
+interface Props {
+  title: string;
+  image: string;
+  imageAlt: string;
+  contents: KeyValuePair<number, string>[];
+  elements: ReactElement[];
+}
+
+const Card = ({ title, image, imageAlt, contents, elements }: Props) => {
   const photoUploadName: string = "photo-upload";
 
   return (

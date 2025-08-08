@@ -1,27 +1,5 @@
 /// <reference types="vite/client" />
 
-// common:
-
-interface NavbarProps {
-  applicationName: string;
-  homePagePath: string;
-  pages: Page[];
-}
-
-interface CardProps {
-  title: string;
-  image: string;
-  imageAlt: string;
-  contents: KeyValuePair<number, string>[];
-  elements: ReactElement[];
-}
-
-interface BadgeProps {
-  textStyle?: string;
-  noMargin?: boolean;
-  content: string;
-}
-
 interface Page {
   name: string;
   path: string;
@@ -32,12 +10,6 @@ interface KeyValuePair<K, V> {
   value: V;
 }
 
-// products:
-
-interface ProductCardProps {
-  product: Product;
-}
-
 interface Product {
   id: number;
   name: string;
@@ -45,8 +17,6 @@ interface Product {
   unit: string;
   description: string;
 }
-
-// images:
 
 interface ProductPhoto {
   url: string;

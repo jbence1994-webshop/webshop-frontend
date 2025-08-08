@@ -1,4 +1,4 @@
-import { type FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import Badge from "../common/Badge";
 import Card from "../common/Card";
@@ -7,7 +7,11 @@ import { getProductPhotos } from "../../services/productPhotoService";
 
 import noImage from "../../assets/no-image.png";
 
-const ProductCard: FC<ProductCardProps> = ({ product }) => {
+interface Props {
+  product: Product;
+}
+
+const ProductCard = ({ product }: Props) => {
   const { id, name, price, unit } = product;
 
   const [images, setImages] = useState<ProductPhoto[]>([]);
