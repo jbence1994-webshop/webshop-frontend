@@ -1,14 +1,15 @@
-import image from "../../assets/unplugged_cable.jpg";
-
 const Error = () => {
   return (
-    <section className="row">
-      <article className="col-12">
-        <div className="text-center">
-          <img src={image} alt="logo" style={{ width: "50%", height: "50%" }} />
-          <h1>Oops!</h1>
-          <h2>Page not found.</h2>
-        </div>
+    <section
+      className="d-flex flex-column justify-content-center align-items-center text-center"
+      style={{ height: "calc(100vh - 56px)" }}
+    >
+      <article className="row">
+        <h1 className="display-1 fw-bold">404</h1>
+        <h2 className="fw-semibold">Oops, This Page Not Found!</h2>
+        <p className="text-muted">
+          The link might be corrupted, or does not exist.
+        </p>
       </article>
     </section>
   );
