@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
-import Navbar from "@components/common/Navbar";
 import Error from "@components/common/Error";
-import Products from "@components/products/Products";
 import Home from "@components/common/Home";
+import Navbar from "@components/common/Navbar";
+import Products from "@components/products/Products";
+
 import {
   ALL_PATHS,
   ERROR_PAGE,

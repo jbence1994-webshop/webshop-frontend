@@ -1,4 +1,5 @@
 import axios, { type AxiosInstance } from "axios";
+
 import { appConfig } from "@config/appConfig";
 
 const axiosInstance: AxiosInstance = axios.create({

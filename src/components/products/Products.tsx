@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
 import ProductCard from "@components/products/ProductCard";
+
 import { getProducts } from "@services/productService";
+
 import type { Product } from "@models/product";
 
 const Products = () => {
