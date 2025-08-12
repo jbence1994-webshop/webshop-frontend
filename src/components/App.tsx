@@ -1,16 +1,17 @@
 import { useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
-import Navbar from "./common/Navbar.tsx";
-import Home from "./common/Home.tsx";
-import Products from "./products/Products.tsx";
-import Error from "./common/Error.tsx";
+import Error from "@components/common/Error";
+import Home from "@components/common/Home";
+import Navbar from "@components/common/Navbar";
+import Products from "@components/products/Products";
+
 import {
   ALL_PATHS,
   ERROR_PAGE,
   HOME_PAGE,
   PRODUCTS_PAGE,
-} from "../config/routes.ts";
+} from "@config/routes";
 
 interface Props {
   name: string;

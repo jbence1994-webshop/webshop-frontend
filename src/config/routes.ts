@@ -1,4 +1,4 @@
-import type { KeyValuePair } from "../types/common/types.ts";
+import type { KeyValuePair } from "@models/key-value-pair";
 
 const HOME_PAGE: KeyValuePair<string, string> = {
   key: "Home",
@@ -17,4 +17,4 @@ const ERROR_PAGE: KeyValuePair<string, string> = {
 
 const ALL_PATHS = "*";
 
-export { HOME_PAGE, PRODUCTS_PAGE, ERROR_PAGE, ALL_PATHS };
+export { ALL_PATHS, ERROR_PAGE, HOME_PAGE, PRODUCTS_PAGE };
