@@ -1,6 +1,5 @@
 import { Fragment, type ReactElement } from "react";
-
-import type { KeyValuePair } from "../../types/common/types.ts";
+import type { KeyValuePair } from "@models/key-value-pair";
 
 interface Props {
   title: string;

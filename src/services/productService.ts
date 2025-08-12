@@ -1,5 +1,5 @@
-import axiosInstance from "../config/axiosConfig.ts";
-import type { Product } from "../types/products/models.ts";
+import axiosInstance from "@config/axiosConfig";
+import type { Product } from "@models/product";
 
 const getProducts = async (): Promise<Product[]> => {
   const response = await axiosInstance.get<Product[]>("/products");
