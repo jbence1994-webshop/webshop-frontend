@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import type { KeyValuePair } from "@models/key-value-pair";
+import type { KeyValuePair } from "@models/keyValuePair";
 
 interface Props {
   applicationName: string;
