@@ -1,5 +1,3 @@
-import { Fragment, type ReactElement } from "react";
-
 import type { KeyValuePair } from "@models/key-value-pair";
 
 interface Props {
@@ -7,10 +5,9 @@ interface Props {
   image: string;
   imageAlt: string;
   contents: KeyValuePair<number, string>[];
-  elements: ReactElement[];
 }
 
-const Card = ({ title, image, imageAlt, contents, elements }: Props) => {
+const Card = ({ title, image, imageAlt, contents }: Props) => {
   const photoUploadName: string = "photo-upload";
 
   return (
@@ -36,10 +33,6 @@ const Card = ({ title, image, imageAlt, contents, elements }: Props) => {
             {content.value}
           </p>
         ))}
-        {elements &&
-          elements.map((element, index) => (
-            <Fragment key={index}>{element}</Fragment>
-          ))}
       </div>
     </div>
   );

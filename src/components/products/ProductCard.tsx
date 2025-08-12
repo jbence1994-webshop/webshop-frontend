@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-import Badge from "@components/common/Badge";
 import Card from "@components/common/Card";
 
 import { getProductPhotos } from "@services/productPhotoService";
@@ -47,8 +46,7 @@ const ProductCard = ({ product }: Props) => {
         title={name}
         image={image}
         imageAlt={name}
-        contents={[]}
-        elements={[<Badge noMargin={true} content={`$${price} / ${unit}`} />]}
+        contents={[{ key: 1, value: `$${price} / ${unit}` }]}
       />
     </>
   );
