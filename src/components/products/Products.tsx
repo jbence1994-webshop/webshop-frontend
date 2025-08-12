@@ -8,24 +8,20 @@ import type { Product } from "@models/product";
 
 const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getAllProducts = async () => {
       try {
         const data = await getProducts();
         setProducts(data);
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
+        /* empty */
       }
     };
 
     getAllProducts();
   }, []);
-
-  if (loading) return <p className="mt-3">Loading...</p>;
 
   return (
     <>
