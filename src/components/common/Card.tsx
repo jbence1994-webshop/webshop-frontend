@@ -1,5 +1,7 @@
 import { Fragment, type ReactElement } from "react";
 
+import type { KeyValuePair } from "./types.ts";
+
 interface Props {
   title: string;
   image: string;

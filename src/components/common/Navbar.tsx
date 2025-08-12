@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import type { Page } from "./types.ts";
+
 interface Props {
   applicationName: string;
   homePagePath: string;

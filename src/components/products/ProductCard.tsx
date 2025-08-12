@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 
-import Badge from "../common/Badge";
-import Card from "../common/Card";
-
+import Badge from "../common/Badge.tsx";
+import Card from "../common/Card.tsx";
+import type { Product, ProductPhoto } from "./models.ts";
 import { getProductPhotos } from "../../services/productPhotoService";
-
 import noImage from "../../assets/no-image.png";
 
 interface Props {

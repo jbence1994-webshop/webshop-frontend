@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
-import ProductCard from "./ProductCard";
-
-import { getProducts } from "../../services/productService";
+import ProductCard from "./ProductCard.tsx";
+import type { Product } from "./models.ts";
+import { getProducts } from "../../services/productService.ts";
 
 const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
