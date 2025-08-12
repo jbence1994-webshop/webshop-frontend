@@ -1,13 +1,16 @@
-import { type FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import Badge from "../common/Badge";
-import Card from "../common/Card";
-
+import Badge from "../common/Badge.tsx";
+import Card from "../common/Card.tsx";
+import type { Product, ProductPhoto } from "./models.ts";
 import { getProductPhotos } from "../../services/productPhotoService";
-
 import noImage from "../../assets/no-image.png";
 
-const ProductCard: FC<ProductCardProps> = ({ product }) => {
+interface Props {
+  product: Product;
+}
+
+const ProductCard = ({ product }: Props) => {
   const { id, name, price, unit } = product;
 
   const [images, setImages] = useState<ProductPhoto[]>([]);

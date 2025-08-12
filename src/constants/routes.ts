@@ -1,3 +1,5 @@
+import type { KeyValuePair } from "../components/common/types.ts";
+
 export const HOME_PAGE: KeyValuePair<string, string> = {
   key: "Home",
   value: "/",

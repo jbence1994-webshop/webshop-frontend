@@ -1,18 +1,18 @@
 import { useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
-import Navbar from "./common/Navbar";
-import Home from "./common/Home";
-import Products from "./products/Products";
-import Error from "./common/Error";
+import Navbar from "./common/Navbar.tsx";
+import Home from "./common/Home.tsx";
+import Products from "./products/Products.tsx";
+import Error from "./common/Error.tsx";
 
-import { APPLICATION_NAME } from "../constants/appConfig";
+import { APPLICATION_NAME } from "../constants/appConfig.ts";
 import {
   HOME_PAGE,
   PRODUCTS_PAGE,
   ERROR_PAGE,
   ALL_PATHS,
-} from "../constants/routes";
+} from "../constants/routes.ts";
 
 const App = () => {
   useEffect(() => {
