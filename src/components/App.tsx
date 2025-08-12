@@ -30,8 +30,8 @@ const App = ({ name }: Props) => {
           homePagePath={HOME_PAGE.value}
           pages={[
             {
-              name: PRODUCTS_PAGE.key,
-              path: PRODUCTS_PAGE.value,
+              key: PRODUCTS_PAGE.key,
+              value: PRODUCTS_PAGE.value,
             },
           ]}
         />

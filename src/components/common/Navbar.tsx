@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import type { Page } from "@models/page";
+import type { KeyValuePair } from "@models/key-value-pair";
 
 interface Props {
   applicationName: string;
   homePagePath: string;
-  pages: Page[];
+  pages: KeyValuePair<string, string>[];
 }
 
 const Navbar = ({ applicationName, homePagePath, pages }: Props) => {
@@ -42,15 +42,15 @@ const Navbar = ({ applicationName, homePagePath, pages }: Props) => {
           id="navbarToggler"
         >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            {pages.map(({ name, path }, index) => (
-              <li key={name} className="nav-item">
+            {pages.map(({ key, value }, index) => (
+              <li key={key} className="nav-item">
                 <Link
                   className={`${index === selectedIndex ? "nav-link active" : "nav-link"}`}
                   aria-current="page"
-                  to={path}
+                  to={value}
                   onClick={() => setSelectedIndex(index)}
                 >
-                  {name}
+                  {key}
                 </Link>
               </li>
             ))}
