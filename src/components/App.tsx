@@ -5,25 +5,27 @@ import Navbar from "./common/Navbar.tsx";
 import Home from "./common/Home.tsx";
 import Products from "./products/Products.tsx";
 import Error from "./common/Error.tsx";
-
-import { APPLICATION_NAME } from "../constants/appConfig.ts";
 import {
+  ALL_PATHS,
+  ERROR_PAGE,
   HOME_PAGE,
   PRODUCTS_PAGE,
-  ERROR_PAGE,
-  ALL_PATHS,
-} from "../constants/routes.ts";
+} from "../config/routes.ts";
 
-const App = () => {
+interface Props {
+  name: string;
+}
+
+const App = ({ name }: Props) => {
   useEffect(() => {
-    document.title = APPLICATION_NAME;
-  }, []);
+    document.title = name;
+  }, [name]);
 
   return (
     <BrowserRouter>
       <header>
         <Navbar
-          applicationName={APPLICATION_NAME}
+          applicationName={name}
           homePagePath={HOME_PAGE.value}
           pages={[
             {

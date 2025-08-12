@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import Badge from "../common/Badge.tsx";
 import Card from "../common/Card.tsx";
-import type { Product, ProductPhoto } from "./models.ts";
+import type { Product, ProductPhoto } from "../../types/products/models.ts";
 import { getProductPhotos } from "../../services/productPhotoService";
 import noImage from "../../assets/no-image.png";
 

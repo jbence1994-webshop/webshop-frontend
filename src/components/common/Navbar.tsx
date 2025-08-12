@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import type { Page } from "./types.ts";
+import type { Page } from "../../types/common/types.ts";
 
 interface Props {
   applicationName: string;

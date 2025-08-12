@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import ProductCard from "./ProductCard.tsx";
-import type { Product } from "./models.ts";
+import type { Product } from "../../types/products/models.ts";
 import { getProducts } from "../../services/productService.ts";
 
 const Products = () => {

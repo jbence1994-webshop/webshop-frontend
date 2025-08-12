@@ -1,13 +1,11 @@
-import axiosInstance from "axios";
-
-import type { ProductPhoto } from "../components/products/models.ts";
-import { BACKEND_URL } from "../constants/appConfig.ts";
+import axiosInstance from "../config/axiosConfig.ts";
+import type { ProductPhoto } from "../types/products/models.ts";
 
 const getProductPhotos = async (productId: number): Promise<ProductPhoto[]> => {
-  const response = await axiosInstance.get<ProductPhoto[]>(
-    `${BACKEND_URL}/products/${productId}/photos`,
+  const { data } = await axiosInstance.get<ProductPhoto[]>(
+    `/products/${productId}/photos`,
   );
-  return response.data;
+  return data;
 };
 
 export { getProductPhotos };
