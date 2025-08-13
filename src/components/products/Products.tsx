@@ -10,17 +10,14 @@ const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    const getAllProducts = async () => {
+    (async () => {
       try {
         const data = await getProducts();
         setProducts(data);
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error) {
-        /* empty */
+        console.log(error);
       }
-    };
-
-    getAllProducts();
+    })();
   }, []);
 
   return (
