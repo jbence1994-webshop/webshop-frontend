@@ -6,6 +6,7 @@ import type { Category } from "@models/category";
 
 const Categories = () => {
   const [categories, setCategories] = useState<Category[]>([]);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   useEffect(() => {
     (async () => {
@@ -17,19 +18,22 @@ const Categories = () => {
       }
     })();
   }, []);
+
   return (
     <aside className="col-3">
       <div className="mt-3 mb-3 p-0 position-sticky" style={{ top: "1rem" }}>
         <div className="list-group">
-          {categories.map((c) => (
+          {categories.map(({ id, name }, index) => (
             <button
-              key={c.id}
+              key={id}
               type="button"
               className={
-                "list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                "list-group-item list-group-item-action d-flex justify-content-between align-items-center" +
+                (selectedIndex === index ? " active" : "")
               }
+              onClick={() => setSelectedIndex(index)}
             >
-              <span>{c.name}</span>
+              <span>{name}</span>
             </button>
           ))}
         </div>
