@@ -8,11 +8,9 @@ interface Props {
 }
 
 const Card = ({ title, image, imageAlt, contents }: Props) => {
-  const photoUploadName: string = "photo-upload";
-
   return (
     <div className="card mt-3 mb-3">
-      <label htmlFor={photoUploadName}>
+      <label htmlFor="photo-upload">
         <img
           src={image}
           alt={imageAlt}
