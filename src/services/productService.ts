@@ -2,8 +2,13 @@ import type { Product } from "@models/product";
 
 import axiosInstance from "@config/axiosConfig";
 
-const getProducts = async (): Promise<Product[]> => {
-  const { data } = await axiosInstance.get<Product[]>("/products");
+const getProducts = async (categoryId?: number): Promise<Product[]> => {
+  let endpoint = "/products";
+  if (categoryId != null) {
+    endpoint = `${endpoint}?categoryId=${categoryId}`;
+  }
+
+  const { data } = await axiosInstance.get<Product[]>(endpoint);
   return data;
 };
 
