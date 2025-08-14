@@ -33,8 +33,15 @@ const ProductsPage = () => {
 
   return (
     <div className="row">
-      <Categories data={categories} onCategorySelect={handleCategorySelected} />
-      <Products data={products} />
+      <aside className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12">
+        <Categories
+          data={categories}
+          onCategorySelect={handleCategorySelected}
+        />
+      </aside>
+      <section className="col-xxl-9 col-xl-9 col-lg-9 col-md-8 col-sm-12 col-xs-12">
+        <Products data={products} />
+      </section>
     </div>
   );
 };

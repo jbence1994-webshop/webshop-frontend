@@ -16,7 +16,7 @@ const Card = ({ title, image, imageAlt, contents }: Props) => {
           alt={imageAlt}
           className="card-img-top"
           style={{
-            width: "200px",
+            width: "180px",
             height: "200px",
             display: "block",
             margin: "0 auto",
