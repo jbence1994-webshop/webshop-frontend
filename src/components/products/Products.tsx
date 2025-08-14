@@ -28,7 +28,7 @@ const Products = () => {
         {products.map(({ id, name, price, unit }) => (
           <article
             key={id}
-            className="col-xxl-4 col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12"
+            className="col-xxl-4 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12"
           >
             <Card
               key={id}
