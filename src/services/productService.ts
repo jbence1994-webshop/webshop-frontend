@@ -4,7 +4,7 @@ import axiosInstance from "@config/axiosConfig";
 
 const getProducts = async (categoryId?: number): Promise<Product[]> => {
   let endpoint = "/products";
-  if (categoryId != null) {
+  if (categoryId != null && categoryId != -1) {
     endpoint = `${endpoint}?categoryId=${categoryId}`;
   }
 
