@@ -20,8 +20,8 @@ const Categories = () => {
   }, []);
 
   return (
-    <aside className="col-3">
-      <div className="mt-3 mb-3 p-0 position-sticky" style={{ top: "1rem" }}>
+    <aside className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12">
+      <div className="position-sticky mt-3" style={{ top: "1rem" }}>
         <div className="list-group">
           {categories.map(({ id, name }, index) => (
             <button
