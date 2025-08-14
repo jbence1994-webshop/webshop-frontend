@@ -1,37 +1,21 @@
-import { useEffect, useState } from "react";
-
-import { getCategories } from "@services/categoriesService";
-
 import type { Category } from "@models/category";
 
-const Categories = () => {
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+interface Props {
+  data: Category[];
+}
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const data = await getCategories();
-        setCategories(data);
-      } catch (error) {
-        console.log(error);
-      }
-    })();
-  }, []);
-
+const Categories = ({ data }: Props) => {
   return (
     <aside className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12">
       <div className="position-sticky mt-3" style={{ top: "1rem" }}>
         <div className="list-group">
-          {categories.map(({ id, name }, index) => (
+          {data.map(({ id: categoryId, name }) => (
             <button
-              key={id}
+              key={categoryId}
               type="button"
               className={
-                "list-group-item list-group-item-action d-flex justify-content-between align-items-center" +
-                (selectedIndex === index ? " active" : "")
+                "list-group-item list-group-item-action d-flex justify-content-between align-items-center"
               }
-              onClick={() => setSelectedIndex(index)}
             >
               <span>{name}</span>
             </button>
