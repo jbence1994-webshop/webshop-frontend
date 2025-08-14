@@ -25,7 +25,7 @@ const Products = () => {
   return (
     <section className="col-xxl-9 col-xl-9 col-lg-9 col-md-8 col-sm-12 col-xs-12">
       <div className="row">
-        {products.map(({ id, name, price, unit }) => (
+        {products.map(({ id, name, price, unit, category }) => (
           <article
             key={id}
             className="col-xxl-4 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12"
@@ -35,7 +35,10 @@ const Products = () => {
               title={name}
               image={noImage}
               imageAlt={name}
-              contents={[{ key: 1, value: `$${price} / ${unit}` }]}
+              contents={[
+                { key: 1, value: category },
+                { key: 2, value: `$${price} / ${unit}` },
+              ]}
             />
           </article>
         ))}
