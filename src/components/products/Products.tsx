@@ -1,38 +1,36 @@
-import { useEffect, useState } from "react";
-
-import ProductCard from "@components/products/ProductCard";
-
-import { getProducts } from "@services/productService";
+import Card from "@components/common/Card";
 
 import type { Product } from "@models/product";
 
-const Products = () => {
-  const [products, setProducts] = useState<Product[]>([]);
+import noImage from "@assets/no-image.png";
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const data = await getProducts();
-        setProducts(data);
-      } catch (error) {
-        console.log(error);
-      }
-    })();
-  }, []);
+interface Props {
+  data: Product[];
+}
 
+const Products = ({ data }: Props) => {
   return (
-    <>
-      <section className="row">
-        {products.map((product) => (
+    <section className="col-xxl-9 col-xl-9 col-lg-9 col-md-8 col-sm-12 col-xs-12">
+      <div className="row">
+        {data.map(({ id, name, price, unit, category }) => (
           <article
-            key={product.id}
-            className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-xs-12"
+            key={id}
+            className="col-xxl-4 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12"
           >
-            <ProductCard product={product} />
+            <Card
+              key={id}
+              title={name}
+              image={noImage}
+              imageAlt={name}
+              contents={[
+                { key: 1, value: category },
+                { key: 2, value: `$${price} / ${unit}` },
+              ]}
+            />
           </article>
         ))}
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

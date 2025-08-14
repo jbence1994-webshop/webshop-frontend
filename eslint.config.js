@@ -28,6 +28,7 @@ export default tseslint.config([
             ["^@components"],
             ["^@services"],
             ["^@models"],
+            ["^@hooks"],
             ["^@config"],
 
             // 4. CSS/SCSS imports

@@ -1,4 +1,4 @@
-const Error = () => {
+const ErrorPage = () => {
   return (
     <section
       className="d-flex flex-column justify-content-center align-items-center text-center"
@@ -15,4 +15,4 @@ const Error = () => {
   );
 };
 
-export default Error;
+export default ErrorPage;

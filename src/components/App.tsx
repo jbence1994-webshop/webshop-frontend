@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
-import Error from "@components/common/Error";
-import Home from "@components/common/Home";
 import Navbar from "@components/common/Navbar";
-import Products from "@components/products/Products";
+import ErrorPage from "@components/pages/ErrorPage";
+import HomePage from "@components/pages/HomePage";
+import ProductsPage from "@components/pages/ProductsPage";
 
 import {
   ALL_PATHS,
@@ -38,9 +38,9 @@ const App = ({ name }: Props) => {
       </header>
       <main className="container">
         <Routes>
-          <Route path={HOME_PAGE.value} element={<Home />} />
-          <Route path={PRODUCTS_PAGE.value} element={<Products />} />
-          <Route path={ERROR_PAGE.value} element={<Error />} />
+          <Route path={HOME_PAGE.value} element={<HomePage />} />
+          <Route path={PRODUCTS_PAGE.value} element={<ProductsPage />} />
+          <Route path={ERROR_PAGE.value} element={<ErrorPage />} />
           <Route
             path={ALL_PATHS}
             element={<Navigate to={ERROR_PAGE.value} />}
