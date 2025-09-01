@@ -28,8 +28,6 @@
     "paths": {
       "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
-      "@config/*": ["config/*"],
-      "@models/*": ["models/*"]
     }
   },
   "include": ["src"]

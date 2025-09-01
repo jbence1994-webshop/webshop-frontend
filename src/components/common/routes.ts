@@ -1,4 +1,4 @@
-import type { KeyValuePair } from "@models/keyValuePair";
+import type { KeyValuePair } from "@components/common/keyValuePair";
 
 const HOME_PAGE: KeyValuePair<string, string> = {
   key: "Home",
