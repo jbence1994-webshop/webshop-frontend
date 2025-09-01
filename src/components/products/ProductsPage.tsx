@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
 
 import Categories from "@components/products/Categories";
+import { CategoriesDataHook } from "@components/products/CategoriesDataHook";
+import type { Product } from "@components/products/product";
+import { getProducts } from "@components/products/product.service";
 import Products from "@components/products/Products";
-
-import { getProducts } from "@services/product.service";
-
-import type { Product } from "@models/product";
-
-import { CategoriesDataHook } from "@hooks/CategoriesDataHook";
-import { ProductDataHook } from "@hooks/ProductsDataHook";
+import { ProductDataHook } from "@components/products/ProductsDataHook";
 
 const ProductsPage = () => {
   const { categories } = CategoriesDataHook();

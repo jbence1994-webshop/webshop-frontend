@@ -26,9 +26,7 @@ export default tseslint.config([
 
             // 3. Internal aliases (custom order)
             ["^@components"],
-            ["^@services"],
             ["^@models"],
-            ["^@hooks"],
             ["^@config"],
 
             // 4. CSS/SCSS imports

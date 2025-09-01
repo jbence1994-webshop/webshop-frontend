@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import type { Category } from "@models/category";
+import type { Category } from "@components/products/category";
 
 import { appConfig } from "@config/app.config";
 

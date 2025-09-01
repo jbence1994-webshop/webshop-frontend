@@ -4,7 +4,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Navbar from "@components/common/Navbar";
 import ErrorPage from "@components/pages/ErrorPage";
 import HomePage from "@components/pages/HomePage";
-import ProductsPage from "@components/pages/ProductsPage";
+import ProductsPage from "@components/products/ProductsPage";
 
 import {
   ALL_PATHS,

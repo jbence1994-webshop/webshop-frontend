@@ -1,4 +1,4 @@
-import type { Category } from "@models/category";
+import type { Category } from "@components/products/category";
 
 interface Props {
   data: Category[];

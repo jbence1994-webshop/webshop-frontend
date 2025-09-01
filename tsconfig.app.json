@@ -29,9 +29,7 @@
       "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
       "@config/*": ["config/*"],
-      "@hooks/*": ["hooks/*"],
-      "@models/*": ["models/*"],
-      "@services/*": ["services/*"]
+      "@models/*": ["models/*"]
     }
   },
   "include": ["src"]
