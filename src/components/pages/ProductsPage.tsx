@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Categories from "@components/products/Categories";
 import Products from "@components/products/Products";
 
-import { getProducts } from "@services/productService";
+import { getProducts } from "@services/product.service";
 
 import type { Product } from "@models/product";
 

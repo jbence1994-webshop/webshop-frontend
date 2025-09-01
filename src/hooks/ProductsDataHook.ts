@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { getProducts } from "@services/productService";
+import { getProducts } from "@services/product.service";
 
 import type { Product } from "@models/product";
 

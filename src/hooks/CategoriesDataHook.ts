@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { getCategories } from "@services/categoriesService";
+import { getCategories } from "@services/category.service";
 
 import type { Category } from "@models/category";
 
