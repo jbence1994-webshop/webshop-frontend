@@ -1,14 +1,16 @@
+import axios from "axios";
+
 import type { Product } from "@models/product";
 
-import axiosInstance from "@config/axiosConfig";
+import { appConfig } from "@config/app.config";
 
 const getProducts = async (categoryId?: number): Promise<Product[]> => {
-  let endpoint = "/products";
+  let endpoint = `${appConfig.backendUrl}/products`;
   if (categoryId != null && categoryId != -1) {
     endpoint = `${endpoint}?categoryId=${categoryId}`;
   }
 
-  const { data } = await axiosInstance.get<Product[]>(endpoint);
+  const { data } = await axios.get<Product[]>(endpoint);
   return data;
 };
 

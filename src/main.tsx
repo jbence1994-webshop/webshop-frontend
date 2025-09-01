@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 
 import App from "@components/App";
 
-import { appConfig } from "@config/appConfig";
+import { appConfig } from "@config/app.config";
 
 import "./main.css";
 
