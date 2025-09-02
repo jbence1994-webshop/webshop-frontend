@@ -24,7 +24,7 @@ export default tseslint.config([
             // 2) Packages (node_modules)
             ['^@?\\w'],
 
-            // 3) Absolute aliases except 'assets'
+            // 3) Absolute aliases (e.g. @ or src/), except 'assets'
             ['^(?:@|src)/(?!assets/)'],
 
             // 4) Side-effect imports (e.g. polyfills, CSS resets)
