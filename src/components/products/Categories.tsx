@@ -1,4 +1,4 @@
-import type { Category } from "@components/products/category";
+import type { Category } from '@/components/products/category.ts';
 
 interface Props {
   data: Category[];
@@ -7,13 +7,13 @@ interface Props {
 
 const Categories = ({ data, onCategorySelect }: Props) => {
   return (
-    <div className="position-sticky mt-3" style={{ top: "1rem" }}>
+    <div className="position-sticky mt-3" style={{ top: '1rem' }}>
       <div className="list-group">
         <button
           key={-1}
           type="button"
           className={
-            "list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+            'list-group-item list-group-item-action d-flex justify-content-between align-items-center'
           }
           onClick={() => onCategorySelect(-1)}
         >
@@ -24,7 +24,7 @@ const Categories = ({ data, onCategorySelect }: Props) => {
             key={categoryId}
             type="button"
             className={
-              "list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+              'list-group-item list-group-item-action d-flex justify-content-between align-items-center'
             }
             onClick={() => onCategorySelect(categoryId)}
           >

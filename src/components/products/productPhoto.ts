@@ -1,3 +1,3 @@
-export interface ProductPhoto {
+export type ProductPhoto = {
   url: string;
-}
+};

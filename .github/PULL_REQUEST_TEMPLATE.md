@@ -1,6 +1,6 @@
 ### Please verify that:
 
-- [ ] `npm run dev` run
+- [ ] `bun run dev` run
 
 ### :pencil: Description
 

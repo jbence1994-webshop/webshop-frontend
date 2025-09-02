@@ -1,20 +1,20 @@
-import type { KeyValuePair } from "@components/common/keyValuePair";
+import type { KeyValuePair } from './keyValuePair.ts';
 
 const HOME_PAGE: KeyValuePair<string, string> = {
-  key: "Home",
-  value: "/",
+  key: 'Home',
+  value: '/',
 };
 
 const PRODUCTS_PAGE: KeyValuePair<string, string> = {
-  key: "Products",
-  value: "/products",
+  key: 'Products',
+  value: '/products',
 };
 
 const ERROR_PAGE: KeyValuePair<string, string> = {
-  key: "Error",
-  value: "/error",
+  key: 'Error',
+  value: '/error',
 };
 
-const ALL_PATHS = "*";
+const ALL_PATHS = '*';
 
 export { ALL_PATHS, ERROR_PAGE, HOME_PAGE, PRODUCTS_PAGE };

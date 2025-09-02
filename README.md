@@ -18,10 +18,7 @@ webshop
 Prerequisites
 -------------
 
-To avoid any unexpected application behavior, make sure you have installed the following tool with the proper version
-number:
-
-- [Node 22.17.0](https://nodejs.org/en/blog/release/v22.17.0)
+- [Bun](https://bun.com/get)
 
 Run project locally
 -------------------
@@ -29,15 +26,16 @@ Run project locally
 ### Installing project dependencies
 
 ```bash
-npm install
+bun install
 ```
 
-Be sure to copy `.env.example` to `.env` and update it with your local settings parameters before running the application.
+Be sure to copy `.env.example` to `.env.local` and update it with your local settings parameters before running the
+application.
 
-### Starting application with npm:
+### Starting application with Bun:
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 #### To view the application, open [http://localhost:3000](http://localhost:3000) in your web browser.

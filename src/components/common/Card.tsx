@@ -1,4 +1,4 @@
-import type { KeyValuePair } from "@components/common/keyValuePair";
+import type { KeyValuePair } from '@/components/common/keyValuePair.ts';
 
 interface Props {
   title: string;
@@ -16,11 +16,11 @@ const Card = ({ title, image, imageAlt, contents }: Props) => {
           alt={imageAlt}
           className="card-img-top"
           style={{
-            width: "180px",
-            height: "200px",
-            display: "block",
-            margin: "0 auto",
-            objectFit: "contain",
+            width: '180px',
+            height: '200px',
+            display: 'block',
+            margin: '0 auto',
+            objectFit: 'contain',
           }}
         />
       </label>

@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import type { Product } from "@components/products/product";
-import { getProducts } from "@components/products/product.service";
+import { getProducts } from '@/components/products/product.service.ts';
+import type { Product } from '@/components/products/product.ts';
 
 export function ProductDataHook() {
   const [products, setProducts] = useState<Product[]>([]);
