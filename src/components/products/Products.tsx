@@ -1,6 +1,5 @@
 import Card from "@components/common/Card";
-
-import type { Product } from "@models/product";
+import type { Product } from "@components/products/product";
 
 import noImage from "@assets/no-image.png";
 

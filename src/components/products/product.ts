@@ -1,4 +1,4 @@
-import type { ProductPhoto } from "@models/productPhoto";
+import type { ProductPhoto } from "@components/products/productPhoto";
 
 export interface Product {
   id: number;

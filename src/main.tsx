@@ -2,8 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import App from "@components/App";
-
-import { appConfig } from "@config/app.config";
+import { appConfig } from "@components/common/app.config";
 
 import "./main.css";
 

@@ -1,8 +1,7 @@
 import axios from "axios";
 
-import type { Category } from "@models/category";
-
-import { appConfig } from "@config/app.config";
+import { appConfig } from "@components/common/app.config";
+import type { Category } from "@components/products/category";
 
 const getCategories = async (): Promise<Category[]> => {
   const { data } = await axios.get<Category[]>(

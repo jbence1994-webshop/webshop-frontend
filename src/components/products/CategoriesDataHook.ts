@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 
-import { getCategories } from "@services/category.service";
-
-import type { Category } from "@models/category";
+import type { Category } from "@components/products/category";
+import { getCategories } from "@components/products/category.service";
 
 export function CategoriesDataHook() {
   const [categories, setCategories] = useState<Category[]>([]);

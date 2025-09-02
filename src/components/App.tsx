@@ -1,17 +1,16 @@
 import { useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
+import ErrorPage from "@components/common/ErrorPage";
+import HomePage from "@components/common/HomePage";
 import Navbar from "@components/common/Navbar";
-import ErrorPage from "@components/pages/ErrorPage";
-import HomePage from "@components/pages/HomePage";
-import ProductsPage from "@components/pages/ProductsPage";
-
 import {
   ALL_PATHS,
   ERROR_PAGE,
   HOME_PAGE,
   PRODUCTS_PAGE,
-} from "@config/routes";
+} from "@components/common/routes";
+import ProductsPage from "@components/products/ProductsPage";
 
 interface Props {
   name: string;

@@ -1,8 +1,7 @@
 import axios from "axios";
 
-import type { Product } from "@models/product";
-
-import { appConfig } from "@config/app.config";
+import { appConfig } from "@components/common/app.config";
+import type { Product } from "@components/products/product";
 
 const getProducts = async (categoryId?: number): Promise<Product[]> => {
   let endpoint = `${appConfig.backendUrl}/products`;
