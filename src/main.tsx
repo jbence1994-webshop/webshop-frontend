@@ -5,6 +5,7 @@ import App from '@/components/App.tsx';
 import { appConfig } from '@/components/common/app.config.ts';
 
 import '@/main.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
