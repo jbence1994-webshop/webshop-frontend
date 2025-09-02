@@ -38,7 +38,7 @@ export default tseslint.config([
             ['^.+\\.s?css$'],
 
             // 7) Images inside 'assets'
-            ['^(?:@|src)/assets/.*\\.(?:avif|bmp|gif|jpe?g|png|svg|webp)$'],
+            ['^(?:@|src)/assets/.*\\.(?:avif|bmp|gif|jpeg|png|svg|webp)$'],
           ],
         },
       ],
