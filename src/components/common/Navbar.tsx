@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import type { KeyValuePair } from "@components/common/keyValuePair";
+import type { KeyValuePair } from '@/components/common/keyValuePair.ts';
 
 interface Props {
   applicationName: string;
@@ -38,14 +38,16 @@ const Navbar = ({ applicationName, homePagePath, pages }: Props) => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          className={`navbar-collapse ${isOpen ? "show" : "collapse"}`}
+          className={`navbar-collapse ${isOpen ? 'show' : 'collapse'}`}
           id="navbarToggler"
         >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             {pages.map(({ key, value }, index) => (
               <li key={key} className="nav-item">
                 <Link
-                  className={`${index === selectedIndex ? "nav-link active" : "nav-link"}`}
+                  className={`${
+                    index === selectedIndex ? 'nav-link active' : 'nav-link'
+                  }`}
                   aria-current="page"
                   to={value}
                   onClick={() => setSelectedIndex(index)}

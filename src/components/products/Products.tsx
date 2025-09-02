@@ -1,7 +1,6 @@
-import Card from "@components/common/Card";
-import type { Product } from "@components/products/product";
-
-import noImage from "@assets/no-image.png";
+import noImage from '@/assets/no-image.png';
+import Card from '@/components/common/Card.tsx';
+import type { Product } from '@/components/products/product.ts';
 
 interface Props {
   data: Product[];

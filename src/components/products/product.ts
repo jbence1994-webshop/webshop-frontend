@@ -1,9 +1,9 @@
-import type { ProductPhoto } from "@components/products/productPhoto";
+import type { ProductPhoto } from '@/components/products/productPhoto.ts';
 
-export interface Product {
+export type Product = {
   id: number;
   name: string;
   price: number;
   unit: string;
   photo: ProductPhoto;
-}
+};

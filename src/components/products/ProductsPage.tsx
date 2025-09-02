@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import Categories from "@components/products/Categories";
-import { CategoriesDataHook } from "@components/products/CategoriesDataHook";
-import type { Product } from "@components/products/product";
-import { getProducts } from "@components/products/product.service";
-import Products from "@components/products/Products";
-import { ProductDataHook } from "@components/products/ProductsDataHook";
+import Categories from '@/components/products/Categories.tsx';
+import { CategoriesDataHook } from '@/components/products/CategoriesDataHook.ts';
+import { getProducts } from '@/components/products/product.service.ts';
+import type { Product } from '@/components/products/product.ts';
+import Products from '@/components/products/Products.tsx';
+import { ProductDataHook } from '@/components/products/ProductsDataHook.ts';
 
 const ProductsPage = () => {
   const { categories } = CategoriesDataHook();

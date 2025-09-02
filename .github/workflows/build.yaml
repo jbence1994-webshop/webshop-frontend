@@ -14,13 +14,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2.0.2
         with:
-          node-version: 22.17.0
+          bun-version-file: ".bun-version"
 
       - name: Install dependencies
-        run: npm install
+        run: bun install
 
       - name: Build
-        run: npm run build
+        run: bun run build
